@@ -2,7 +2,6 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
-matplotlib.use('agg')
 import matplotlib.pyplot as plt
 
 
