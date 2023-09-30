@@ -2,6 +2,9 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
+import matplotlib.pyplot as plt 
+import seaborn as sns
+
 
 
 def load_data():
@@ -29,9 +32,52 @@ data = load_data()
 
 st.title("Application de données Google Sheets avec Streamlit")
 
+
+
+
 # Afficher les données dans une table
 st.write("Données depuis Google Sheets :")
-st.write(data)
+df=pd.DataFrame(data)
+st.write(df)
+# Convertir la colonne "Ventes" en nombres décimaux
+data['Ventes'] = data['Ventes'].str.replace(',', '').astype(float)
+
+    # Création d'un graphique à barres avec Matplotlib
+# Création d'un graphique à barres avec Matplotlib en spécifiant les couleurs
+colors = ['blue', 'green', 'red', 'purple', 'orange', 'pink', 'brown', 'gray', 'cyan', 'magenta']
+plt.figure(figsize=(10, 6))
+bars = plt.bar(data['Nom'], data['Ventes'], color=colors)
+plt.xlabel("Nom")
+plt.ylabel("Chiffre d'affaires (en milliers d'euros)")
+plt.title("Chiffre d'affaires par courtier")
+plt.xticks(rotation=45, ha="right")
+st.pyplot(plt)
+
+ # Création d'un graphique à barres horizontal avec Seaborn
+
+fig, ax = plt.subplots()
+sns.barplot(x='Ventes', y='Nom', data=data,  ax=ax)
+ax.set_xlabel("Chiffre d'affaires (en milliers d'euros)")
+ax.set_ylabel('Courtier')
+plt.title("Chiffre d'affaires par courtier")
+st.pyplot(fig)
+
+# Sélection du courtier pour afficher les détails
+selected_courtier = st.selectbox('Sélectionnez un courtier:', data['Nom'])
+
+# Affichage des détails du courtier sélectionné
+st.write('Détails du courtier sélectionné:')
+selected_data = df[df['Nom'] == selected_courtier]
+st.write(selected_data)
+
+
+
+
+
+
+
+
+
 
 
 
