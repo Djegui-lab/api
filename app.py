@@ -75,16 +75,6 @@ st.write(filtered_data)
 
 
 
-# Sélectionner les colonnes "Nom" et "Ventes" et les convertir en dictionnaire
-data_dict = data[['Nom', 'Ventes']].to_dict(orient='records')
-
-# Afficher le dictionnaire
-st.write("Dictionnaire avec les colonnes 'Nom' et 'Ventes' :")
-# Création d'un DataFrame à partir des données
-df = pd.DataFrame(data_dict)
-st.write(df)
-
-
 # Filtrer les données par critères spécifiques
 st.write("Filtrer les données par fiches:")
 filter_fiches = st.slider("Fiches minimales", min_value=0, max_value=40, value=0)
