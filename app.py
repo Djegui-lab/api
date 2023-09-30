@@ -44,7 +44,7 @@ colors = ['blue', 'green', 'red', 'purple', 'orange', 'pink', 'brown', 'gray', '
 fig, ax = plt.subplots()
 sns.barplot(x="Nom", y='Ventes', data=df, ax=ax)
 ax.set_xlabel("nom")
-ax.set_ylabel('Chiffre d\'affaires (en milliers d'euros')
+ax.set_ylabel("Chiffre d\'affaires (en milliers d'euros")
 st.pyplot(fig)
 
    
