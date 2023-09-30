@@ -66,12 +66,12 @@ st.write("Statistiques descriptives :")
 st.write(statistics)
 
 
-# Convertir la colonne de date en format de date
-data['Date'] = pd.to_datetime(data['Date'])
+# Filtrer les données par critères spécifiques
+st.write("Sous-ensemble de données :")
+filter_criteria = st.slider("Ventes minimales", min_value=0, max_value=2000, value=0)
+filtered_data = data[data['Ventes'] >= filter_criteria]
+st.write(filtered_data)
 
-# Afficher un graphique de lignes pour les ventes au fil du temps
-st.write("Analyse de série temporelle des ventes :")
-st.line_chart(data.set_index('Date')['Ventes'])
 
 
 
