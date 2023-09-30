@@ -48,8 +48,7 @@ def analyze_data(data):
 
 data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
-# Afficher les données dans une table
-st.write("Données depuis Google Sheets :")
+
 st.write(data)
 
 # Analyser les données
