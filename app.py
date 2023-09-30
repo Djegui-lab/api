@@ -76,7 +76,6 @@ st.write(filtered_data)
 
 
 # Filtrer les données par critères spécifiques
-data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
 st.write("Filtrer les données par fiches:")
 filter_fiches = st.slider("Fiches minimales", min_value=0, max_value=40, value=0)
