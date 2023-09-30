@@ -39,7 +39,7 @@ st.write(df)
 
 # Convertir la colonne "Ventes" en nombres entiers
 
-import seaborn as sns
+
 data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
 
