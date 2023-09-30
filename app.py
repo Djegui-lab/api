@@ -37,6 +37,12 @@ data=pd.DataFrame(data)
 st.write(data)
 
 
+# Fonction d'analyse de données
+def analyze_data(data):
+    # Exemple d'analyse : Calcul de la somme des ventes par courtier
+    total_ventes = data.groupby('Nom')['Ventes'].sum().reset_index()
+    return total_ventes
+
 # Convertir la colonne "Ventes" en nombres entiers
 
 
