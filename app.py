@@ -2,7 +2,6 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
-import matplotlib.pyplot as plt 
 
 def load_data():
     # Définissez les autorisations et l'accès au fichier JSON de clé d'API
@@ -86,15 +85,7 @@ st.write(df)
 
 
 
- # Créer un graphique à barres avec Seaborn
-sns.set(style="whitegrid")
-plt.figure(figsize=(10, 6))
-ax = sns.barplot(x='Ventes', y='Nom', data=data, palette='viridis')
-ax.set_xlabel("Nombre de ventes")
-ax.set_ylabel('Nom')
-ax.set_title("Nombre de ventes par nom")
-
-st.pyplot()
+ 
 
 
 
