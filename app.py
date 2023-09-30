@@ -33,8 +33,8 @@ st.title("Application de données Google Sheets avec Streamlit")
 
 # Afficher les données dans une table
 st.write("Données depuis Google Sheets :")
-df=pd.DataFrame(data)
-st.write(df)
+data=pd.DataFrame(data)
+st.write(data)
 
 
 # Convertir la colonne "Ventes" en nombres entiers
@@ -42,6 +42,17 @@ st.write(df)
 
 data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
+# Afficher les données dans une table
+    st.write("Données depuis Google Sheets :")
+    st.write(data)
+
+    # Analyser les données
+    st.write("Analyse des ventes par courtier :")
+    total_ventes = analyze_data(data)
+    st.write(total_ventes)
+
+    # Créer un graphique à barres avec Pandas
+    st.bar_chart(total_ventes.set_index('Nom'))
 
 
 
