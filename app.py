@@ -80,7 +80,7 @@ data['Fiches'] = data['Fiches'].str.replace(',', '').astype(int)
 filter_fiches = st.slider("Fiches minimales", min_value=0, max_value=20, value=0)
 
 # Filtrer les données en fonction des critères
-filt_data = data[(data['Fiches'] >= filter_fiches)]
+filt_data = data[(data['Fiches']  <= filter_fiches)]
 
 st.write(filt_data)
 
