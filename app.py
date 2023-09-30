@@ -35,8 +35,8 @@ st.title("Application de données Google Sheets avec Streamlit")
 st.write("Données depuis Google Sheets :")
 df=pd.DataFrame(data)
 st.write(df)
-# Convertir la colonne "Ventes" en nombres décimaux
-data['Ventes'] = data['Ventes'].str.replace(',', '').astype(float)
+# Convertir la colonne "Ventes" en nombres entiers
+data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
     # Création d'un graphique à barres avec Matplotlib
 # Création d'un graphique à barres avec Matplotlib en spécifiant les couleurs
@@ -47,8 +47,9 @@ plt.xlabel("Nom")
 plt.ylabel("Chiffre d'affaires (en milliers d'euros)")
 plt.title("Chiffre d'affaires par courtier")
 plt.xticks(rotation=45, ha="right")
-st.pyplot(plt.gcf())
+st.pyplot(plt)
 
+   
 
 
 
