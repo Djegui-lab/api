@@ -35,17 +35,6 @@ st.title("Application de données Google Sheets avec Streamlit")
 st.write("Données depuis Google Sheets :")
 df=pd.DataFrame(data)
 st.write(df)
-# Convertir la colonne "Ventes" en nombres entiers
-data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
-
-    # Création d'un graphique à barres avec Matplotlib
-# Création d'un graphique à barres avec Matplotlib en spécifiant les couleurs
-colors = ['blue', 'green', 'red', 'purple', 'orange', 'pink', 'brown', 'gray', 'cyan', 'magenta']
-fig, ax = plt.subplots()
-sns.barplot(x="Nom", y='Ventes', data=df, ax=ax)
-ax.set_xlabel("nom")
-ax.set_ylabel("Chiffre d\'affaires (en milliers d'euros")
-st.pyplot(fig)
 
    
 
