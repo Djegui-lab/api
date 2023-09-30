@@ -87,6 +87,18 @@ st.write(df)
 
 
 
+# Filtrer les données par critères spécifiques
+st.write("Sous-ensemble de données :")
+
+# Ajouter des curseurs pour spécifier les valeurs minimales de Ventes et Fiches
+min_ventes = st.slider("Ventes minimales", min_value=0, max_value=2000, value=0)
+min_fiches = st.slider("Fiches minimales", min_value=0, max_value=20, value=0)
+
+# Filtrer les données en fonction des critères
+filtered_df = data[(data['Ventes'] >= min_ventes) & (data['Fiches'] >= min_fiches)]
+st.write(filtered_df)
+
+
 
 
 
