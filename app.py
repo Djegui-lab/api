@@ -1,6 +1,5 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-import seaborn as sns
 import streamlit as st 
 import pandas as pd 
 
