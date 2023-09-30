@@ -27,13 +27,13 @@ def load_data():
 data = load_data()
 
 
-st.title("Application de données Google Sheets avec Streamlit")
+st.title("Application WEB")
+st.write("AUTEUR : DJEGUI-WAGUE)
 
 
 
 
-# Afficher les données dans une table
-st.write("Données depuis Google Sheets :")
+
 data=pd.DataFrame(data)
 
 
