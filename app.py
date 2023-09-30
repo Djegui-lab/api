@@ -2,7 +2,6 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
-import seaborn as sns
 import matplotlib.pyplot as plt 
 
 
@@ -52,22 +51,7 @@ plt.title("Chiffre d'affaires par courtier")
 plt.xticks(rotation=45, ha="right")
 st.pyplot(plt)
 
- # Création d'un graphique à barres horizontal avec Seaborn
 
-fig, ax = plt.subplots()
-sns.barplot(x='Ventes', y='Nom', data=data,  ax=ax)
-ax.set_xlabel("Chiffre d'affaires (en milliers d'euros)")
-ax.set_ylabel('Courtier')
-plt.title("Chiffre d'affaires par courtier")
-st.pyplot(fig)
-
-# Sélection du courtier pour afficher les détails
-selected_courtier = st.selectbox('Sélectionnez un courtier:', data['Nom'])
-
-# Affichage des détails du courtier sélectionné
-st.write('Détails du courtier sélectionné:')
-selected_data = df[df['Nom'] == selected_courtier]
-st.write(selected_data)
 
 
 
