@@ -65,14 +65,13 @@ statistics = data.describe()
 st.write("Statistiques descriptives :")
 st.write(statistics)
 
-# Afficher un histogramme
-st.write("Histogramme des ventes :")
-st.hist(data['Ventes'], bins=20, edgecolor='k')
-st.pyplot()
 
-# Afficher un graphique de densité
-st.write("Graphique de densité des ventes :")
-st.plotly_chart(px.histogram(data, x='Ventes', nbins=20))
+# Convertir la colonne de date en format de date
+data['Date'] = pd.to_datetime(data['Date'])
+
+# Afficher un graphique de lignes pour les ventes au fil du temps
+st.write("Analyse de série temporelle des ventes :")
+st.line_chart(data.set_index('Date')['Ventes'])
 
 
 
