@@ -74,6 +74,15 @@ st.write(filtered_data)
 
 
 
+# Sélectionner les colonnes "Nom" et "Ventes" et les convertir en dictionnaire
+data_dict = data[['Nom', 'Ventes']].to_dict(orient='records')
+
+# Afficher le dictionnaire
+st.write("Dictionnaire avec les colonnes 'Nom' et 'Ventes' :")
+st.write(data_dict)
+
+
+
 
 
 
