@@ -42,8 +42,12 @@ st.write(df)
 
 data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
-
-
+# Création d'un diagramme en barres horizontal avec Pandas
+ax = data.plot(kind='barh', x='Nom', y='Ventes', figsize=(10, 6))
+ax.set_xlabel("Chiffre d'affaires (en milliers d'euros)")
+ax.set_ylabel('Courtier')
+ax.set_title("Chiffre d'affaires par courtier")
+st.pyplot()
 
 
 
