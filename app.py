@@ -48,7 +48,7 @@ plt.xlabel("Nom")
 plt.ylabel("Chiffre d'affaires (en milliers d'euros)")
 plt.title("Chiffre d'affaires par courtier")
 plt.xticks(rotation=45, ha="right")
-st.pyplot(plt)
+st.pyplot(plt.gcf())
 
 
 
