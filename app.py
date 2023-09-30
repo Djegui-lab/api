@@ -60,6 +60,12 @@ st.write(total_ventes)
 st.bar_chart(total_ventes.set_index('Nom'))
 
 
+# Calculer les statistiques descriptives
+statistics = data.describe()
+st.write("Statistiques descriptives :")
+st.write(statistics)
+
+
 
 
 
