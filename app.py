@@ -34,7 +34,6 @@ st.title("Application de données Google Sheets avec Streamlit")
 # Afficher les données dans une table
 st.write("Données depuis Google Sheets :")
 data=pd.DataFrame(data)
-st.write(data)
 
 
 # Fonction d'analyse de données
