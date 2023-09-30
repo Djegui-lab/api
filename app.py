@@ -28,7 +28,7 @@ data = load_data()
 
 
 st.title("Application WEB")
-st.write("AUTEUR : DJEGUI-WAGUE)
+st.write("AUTEUR : DJEGUI-WAGUE")
 
 
 
