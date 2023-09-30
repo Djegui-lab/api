@@ -65,11 +65,14 @@ statistics = data.describe()
 st.write("Statistiques descriptives :")
 st.write(statistics)
 
+# Afficher un histogramme
+st.write("Histogramme des ventes :")
+st.hist(data['Ventes'], bins=20, edgecolor='k')
+st.pyplot()
 
-# Calculer la matrice de corrélation
-correlation_matrix = data.corr()
-st.write("Matrice de corrélation :")
-st.write(correlation_matrix)
+# Afficher un graphique de densité
+st.write("Graphique de densité des ventes :")
+st.plotly_chart(px.histogram(data, x='Ventes', nbins=20))
 
 
 
