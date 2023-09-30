@@ -76,7 +76,7 @@ st.write(filtered_data)
 
 
 # Curseur pour définir le nombre minimal de fiches
-filter_fiches = st.slider("Fiches minimales", min_value=0, max_value=20, value=0)
+filter_fiches = st.slider("Fiches minimales", min_value=-1, max_value=20, value=0)
 # Filtrer les données en fonction des critères
 filtere_data = data[(data['Fiches'] >= filter_ventes)]
 
