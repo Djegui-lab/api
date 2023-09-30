@@ -41,13 +41,11 @@ data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
     # Création d'un graphique à barres avec Matplotlib
 # Création d'un graphique à barres avec Matplotlib en spécifiant les couleurs
 colors = ['blue', 'green', 'red', 'purple', 'orange', 'pink', 'brown', 'gray', 'cyan', 'magenta']
-plt.figure(figsize=(10, 6))
-bars = plt.bar(data['Nom'], data['Ventes'], color=colors)
-plt.xlabel("Nom")
-plt.ylabel("Chiffre d'affaires (en milliers d'euros)")
-plt.title("Chiffre d'affaires par courtier")
-plt.xticks(rotation=45, ha="right")
-st.pyplot(plt)
+fig, ax = plt.subplots()
+sns.barplot(x="Nom", y='Ventes', data=df, ax=ax)
+ax.set_xlabel("nom")
+ax.set_ylabel('Chiffre d\'affaires (en milliers d'euros')
+st.pyplot(fig)
 
    
 
