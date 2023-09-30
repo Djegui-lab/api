@@ -79,7 +79,9 @@ data_dict = data[['Nom', 'Ventes']].to_dict(orient='records')
 
 # Afficher le dictionnaire
 st.write("Dictionnaire avec les colonnes 'Nom' et 'Ventes' :")
-st.write(data_dict)
+# Création d'un DataFrame à partir des données
+df = pd.DataFrame(data_dict)
+st.write(df)
 
 
 
