@@ -35,8 +35,18 @@ st.write("Données depuis Google Sheets :")
 df=pd.DataFrame(data)
 st.write(df)
 
-   
 
+# Convertir la colonne "Ventes" en nombres entiers
+data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
+# Création d'un graphique à barres horizontal avec Seaborn
+sns.set(style="whitegrid")
+plt.figure(figsize=(10, 6))
+ax = sns.barplot(data['Nom'], data['Ventes'], data=data, palette='viridis')
+ax.set_xlabel("Chiffre d'affaires (en milliers d'euros)")
+ax.set_ylabel('Courtier')
+ax.set_title("Chiffre d'affaires par courtier")
+    
+st.pyplot()
 
 
 
