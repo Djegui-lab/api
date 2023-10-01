@@ -56,25 +56,8 @@ st.write("Analyse des ventes par courtier :")
 total_ventes = analyze_data(data)
 st.write(total_ventes)
 
-# Créer un graphique à barres avec Pandas
-bar_chart = st.bar_chart(total_ventes.set_index('Nom'))
+st.bar_chart(total_ventes.set_index('Nom'))
 
-# Ajouter des couleurs personnalisées au graphique
-bar_chart.plotly_chart({
-    'data': [
-        {
-            'x': total_ventes['Nom'],
-            'y': total_ventes['Ventes'],
-            'type': 'bar',
-            'marker': {'color': ['red', 'green', 'blue', 'yellow', 'purple','red', 'green', 'blue', 'yellow', 'purple','red', 'green', 'blue', 'yellow', 'purple','red', 'green', 'blue', 'yellow', 'purple','red', 'green', 'blue', 'yellow', 'purple','red']}  # Vous pouvez spécifier les couleurs ici
-        }
-    ],
-    'layout': {
-        'xaxis': {'title': 'Courtier'},
-        'yaxis': {'title': 'Ventes'},
-        'title': 'Ventes par courtier'
-    }
-})
 
 
 
