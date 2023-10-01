@@ -86,6 +86,9 @@ data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 
 
 # Analyser les données
+
+print()
+print()
 st.write("Analyse des ventes par courtier :")
 total_ventes = analyze_data(data)
 #st.write(total_ventes)
