@@ -2,7 +2,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
-import plotly
+
 
 def load_data():
     # Définissez les autorisations et l'accès au fichier JSON de clé d'API
