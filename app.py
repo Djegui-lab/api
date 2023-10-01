@@ -27,16 +27,50 @@ def load_data():
     return df
 
 data = load_data()
-
-
 st.title("Application WEB")
 st.write("AUTEUR : DJEGUI-WAGUE")
-
-
-
-
-
 data=pd.DataFrame(data)
+
+
+
+# Dictionnaire pour stocker les informations de l'utilisateur
+utilisateur = {
+    'Nom': ' Djegui',
+    'Prénom': 'prenom',
+    'Âge': '26',
+    'Adresse e-mail': 'dwague44@gmail.com',
+    'Numéro': '+212605275874'
+}
+
+# Mot de passe pour accéder à la fonctionnalité
+mot_de_passe_valide = "monmotdepasse"
+
+# Vérifiez le mot de passe pour accéder aux informations
+st.title("Accédez aux Informations")
+mot_de_passe = st.text_input("Entrez votre mot de passe pour accéder aux informations :", type="password")
+
+if mot_de_passe == mot_de_passe_valide:
+    st.success("Mot de passe correct ! Vous avez accès aux informations.")
+    data = load_data()
+    df=pd.DataFrame(data)
+    st.write(df)
+
+    # Affichez les informations de l'utilisateur
+    st.write("Informations de l'utilisateur :")
+    for cle, valeur in utilisateur.items():
+        st.write(f"{cle}: {valeur}")
+     
+else:
+    # Si le mot de passe est incorrect, affichez un message d'erreur
+    st.error("Mot de passe incorrect. Vous n'avez pas accès aux informations.")
+
+
+
+
+
+
+
+
 
 
 # Fonction d'analyse de données
