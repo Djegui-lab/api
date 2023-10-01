@@ -2,7 +2,6 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
-import matplotlib.pyplot as plt
 
 
 def load_data():
@@ -45,6 +44,7 @@ def analyze_data(data):
     return total_ventes
 
 # Convertir la colonne "Ventes" en nombres entiers
+import matplotlib.pyplot as plt
 
 
 data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
