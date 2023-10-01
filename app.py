@@ -113,12 +113,12 @@ st.write(selected_data)
 
 # Calculer les statistiques descriptives
 statistics = data.describe()
-st.write("Statistiques descriptives :")
+st.subheadere("Statistiques descriptives :")
 st.write(statistics)
 
 
 # Filtrer les données par critères spécifiques
-st.write("Sous-ensemble de données :")
+st.subheader("TRIER LES DONNÉES PAR VENTE :")
 filter_criteria = st.slider("Ventes minimales", min_value=0, max_value=2000, value=0)
 filtered_data = data[data['Ventes'] >= filter_criteria]
 st.write(filtered_data)
@@ -127,6 +127,8 @@ st.write(filtered_data)
 
 data['Fiches'] = data['Fiches'].str.replace(',', '').astype(int)
 # Curseur pour définir le nombre minimal de fiches
+st.subheader("TRIER LES DONNÉES PAR FICHE :")
+
 filter_fiches = st.slider("Fiches minimales", min_value=0, max_value=20, value=0)
 
 # Filtrer les données en fonction des critères
