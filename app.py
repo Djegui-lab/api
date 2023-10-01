@@ -44,7 +44,7 @@ button = st.button("Valider")
 # Vérifie si le bouton a été cliqué
 if button:
     if demander_nom:
-        st.write("Bonjour,", demander_nom, ", je suis un modèle fabriqué par Djégui-Wagué.")
+        st.write("BONJOUR !",demander_nom, "je suis un modèle fabriqué par Djégui-Wagué.")
     else:
         st.write("Veuillez entrer votre nom.")
 
