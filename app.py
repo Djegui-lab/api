@@ -3,7 +3,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st 
 import pandas as pd 
-from decouple import Config
+
 
 
 def load_data():
