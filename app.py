@@ -64,8 +64,8 @@ else:
     st.error("Mot de passe incorrect. Vous n'avez pas accès aux informations.")
 
 demander_nom=st.text_input("QUEL EST VOTRE NOM ?")
-
-st.write("Bonjour",demander_nom, "je suis un model fabriqué par :Djégui-Wagué")
+if button:
+   st.write("Bonjour",demander_nom, "je suis un model fabriqué par:Djégui-Wagué")
 
 
 
