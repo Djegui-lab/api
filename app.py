@@ -88,7 +88,7 @@ data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
 # Analyser les données
 st.write("Analyse des ventes par courtier :")
 total_ventes = analyze_data(data)
-st.write(total_ventes)
+#st.write(total_ventes)
 
 st.bar_chart(total_ventes.set_index('Nom'))
 
