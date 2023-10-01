@@ -60,6 +60,19 @@ st.write(total_ventes)
 st.bar_chart(total_ventes.set_index('Nom'))
 
 
+
+# Sélection du courtier pour afficher les détails
+selected_courtier = st.selectbox('Sélectionnez un courtier:', data['Nom'])
+
+# Affichage des détails du courtier sélectionné
+st.write('Détails du courtier sélectionné:')
+selected_data = data[data['Nom'] == selected_courtier]
+st.write(selected_data)
+
+
+
+
+
 # Calculer les statistiques descriptives
 statistics = data.describe()
 st.write("Statistiques descriptives :")
