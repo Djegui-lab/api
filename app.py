@@ -65,12 +65,20 @@ else:
 
 
 
-demander_nom=st.text_input("QUEL EST VOTRE NOM ?")
+
+# Demande le nom de l'utilisateur
+demander_nom = st.text_input("QUEL EST VOTRE NOM ?")
+
+# Crée un bouton pour afficher le message de bienvenue
 button = st.button("Valider")
+
+# Vérifie si le bouton a été cliqué
 if button:
-   st.write("Bonjour",demander_nom, "je suis un model fabriqué par:Djégui-Wagué")
-else: 
-    st.write("veuillez entrer votre nom")
+    if demander_nom:
+        st.write("Bonjour,", demander_nom, ", je suis un modèle fabriqué par Djégui-Wagué.")
+    else:
+        st.write("Veuillez entrer votre nom.")
+
 
 
 
