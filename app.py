@@ -66,6 +66,7 @@ else:
 
 
 
+data = load_data()
 
 
 
