@@ -51,6 +51,7 @@ if mot_de_passe == mot_de_passe_valide:
     st.success("Mot de passe correct ! Vous avez accès aux informations.")
     data = load_data()
     df=pd.DataFrame(data)
+    st.subheader("base de données courtier(ASSURANCE)")
     st.write(df)
 
     # Affichez les informations de l'utilisateur
