@@ -112,7 +112,7 @@ st.write(selected_data)
 
 
 # Calculer les statistiques descriptives
-st.subheadere("Statistiques descriptives :")
+st.subheader("Statistiques descriptives :")
 
 statistics = data.describe()
 st.write(statistics)
