@@ -41,7 +41,7 @@ utilisateur = {
 }
 
 # Mot de passe pour accéder à la fonctionnalité
-mot_de_passe_valide = "monmotdepasse"
+mot_de_passe_valide = "djegui0000"
 
 # Vérifiez le mot de passe pour accéder aux informations
 st.title("Accédez aux Informations")
