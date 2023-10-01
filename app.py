@@ -33,8 +33,8 @@ st.write("AUTEUR : DJEGUI-WAGUE")
 
 # Dictionnaire pour stocker les informations de l'utilisateur
 utilisateur = {
-    'Nom': ' Djegui',
-    'Prénom': 'prenom',
+    'Nom': ' WAGUE',
+    'Prénom': 'DJEGUI',
     'Âge': '26',
     'Adresse e-mail': 'dwague44@gmail.com',
     'Numéro': '+212605275874'
