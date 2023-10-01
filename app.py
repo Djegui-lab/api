@@ -44,7 +44,6 @@ def analyze_data(data):
     return total_ventes
 
 # Convertir la colonne "Ventes" en nombres entiers
-import matplotlib.pyplot as plt
 
 
 data['Ventes'] = data['Ventes'].str.replace(',', '').astype(int)
