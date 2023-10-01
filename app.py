@@ -174,8 +174,7 @@ if st.button("Se connecter"):
     else:
         st.write("Mot de passe incorrect. Veuillez réessayer.")
 
-
-
+st.write("Merci pour votre visite",demander_nom !)
 
 
  
