@@ -98,7 +98,21 @@ filter_fiches = st.slider("Fiches minimales", min_value=0, max_value=20, value=0
 filt_data = data[(data['Fiches']  <= filter_fiches)]
 
 st.write(filt_data)
+st.write()
+st.write()
+mot_de_passe_correct = "djegui0000"
 
+# Affichez un champ de saisie de mot de passe
+mot_de_passe_utilisateur = st.text_input("Veuillez entrer le mot de passe", type="password")
+
+# Vérifiez si le mot de passe est correct lorsque l'utilisateur soumet le formulaire
+if st.button("Se connecter"):
+    if mot_de_passe_utilisateur == mot_de_passe_correct:
+        # Redirigez l'utilisateur vers l'autre application en fonction de l'URL
+        lien_autre_app = "https://djegui-hello-bgctyuzfiydk2zkbzmyzna.streamlit.app/"
+        st.write("Mot de passe correct. Vous pouvez accéder à l'application [ici](%s)." % lien_autre_app)
+    else:
+        st.write("Mot de passe incorrect. Veuillez réessayer.")
 
 
 
