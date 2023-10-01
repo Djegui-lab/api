@@ -29,7 +29,6 @@ def load_data():
 data = load_data()
 st.title("Application WEB")
 st.write("AUTEUR : DJEGUI-WAGUE")
-data=pd.DataFrame(data)
 
 
 
