@@ -63,9 +63,15 @@ else:
     # Si le mot de passe est incorrect, affichez un message d'erreur
     st.error("Mot de passe incorrect. Vous n'avez pas accès aux informations.")
 
+
+# Crée un bouton pour afficher le message de bienvenue
+button = st.button("Valider")
+
 demander_nom=st.text_input("QUEL EST VOTRE NOM ?")
 if button:
    st.write("Bonjour",demander_nom, "je suis un model fabriqué par:Djégui-Wagué")
+else: 
+    st.write("veuillez entrer votre nom")
 
 
 
