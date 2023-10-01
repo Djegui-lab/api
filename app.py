@@ -28,10 +28,10 @@ def load_data():
 
 st.title("Application WEB")
 st.write("AUTEUR : DJEGUI-WAGUE")
+st.write()
+st.write()
+st.write()
 
-ptint()
-ptint()
-ptint()
 
 # Demande le nom de l'utilisateur
 demander_nom = st.text_input("QUEL EST VOTRE NOM ?")
