@@ -30,12 +30,14 @@ st.title("Application WEB")
 st.write("AUTEUR : DJEGUI-WAGUE")
 st.write()
 st.write()
-st.write()
 
 
 # Demande le nom de l'utilisateur
-demander_nom = st.text_input("QUEL EST VOTRE NOM ?")
+# Centrer le texte dans le champ de texte
+st.markdown("<h1 style='text-align: center;'>QUEL EST VOTRE NOM ?</h1>", unsafe_allow_html=True)
 
+# Demande le nom de l'utilisateur
+demander_nom = st.text_input("")
 # Crée un bouton pour afficher le message de bienvenue
 button = st.button("Valider")
 
